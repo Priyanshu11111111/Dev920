@@ -1,2 +1,2 @@
 this is line 1 
-This is file 2 from git Bash
+This is filfjmwedle 2 from git Bash
