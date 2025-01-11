@@ -1,2 +1,4 @@
 this is line 1 
 This is filfjmwedle 2 from git Bash
+
+i modified this file at 12:40
