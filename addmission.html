@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Admission Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .admission-container {
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .admission-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #00ff99;
+        }
+
+        .admission-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admission-container label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .admission-container input[type="text"],
+        .admission-container input[type="email"],
+        .admission-container input[type="number"],
+        .admission-container input[type="date"],
+        .admission-container select {
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        .admission-container input:focus,
+        .admission-container select:focus {
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px #00ff99;
+        }
+
+        .admission-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #00ff99, #0066ff);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .admission-container input[type="submit"]:hover {
+            background: linear-gradient(90deg, #0066ff, #00ff99);
+            box-shadow: 0 0 20px #00ff99;
+        }
+
+        .floating-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .floating-circles span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .floating-circles span:nth-child(1) {
+            left: 15%;
+            animation-duration: 6s;
+        }
+
+        .floating-circles span:nth-child(2) {
+            left: 35%;
+            animation-duration: 9s;
+        }
+
+        .floating-circles span:nth-child(3) {
+            left: 55%;
+            animation-duration: 12s;
+        }
+
+        .floating-circles span:nth-child(4) {
+            left: 75%;
+            animation-duration: 8s;
+        }
+
+        .floating-circles span:nth-child(5) {
+            left: 90%;
+            animation-duration: 7s;
+        }
+
+        @keyframes float {
+            0% {
+                top: 100%;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(30px);
+            }
+            100% {
+                top: -10%;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admission-container">
+        <h2>Admission Form</h2>
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="course">Select Course</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="btech">B.Tech</option>
+                <option value="bsc">B.Sc</option>
+                <option value="mba">MBA</option>
+                <option value="mca">MCA</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="floating-circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
